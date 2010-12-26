@@ -1,0 +1,29 @@
+<h1>Listing wagers</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Left user</th>
+    <th>Right user</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wagers.each do |wager| %>
+  <tr>
+    <td><%= wager.title %></td>
+    <td><%= wager.description %></td>
+    <td><%= wager.left_user_id %></td>
+    <td><%= wager.right_user_id %></td>
+    <td><%= link_to 'Show', wager %></td>
+    <td><%= link_to 'Edit', edit_wager_path(wager) %></td>
+    <td><%= link_to 'Destroy', wager, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wager', new_wager_path %>

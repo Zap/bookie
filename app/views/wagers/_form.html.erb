@@ -1,0 +1,33 @@
+<%= form_for(@wager) do |f| %>
+  <% if @wager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wager.errors.count, "error") %> prohibited this wager from being saved:</h2>
+
+      <ul>
+      <% @wager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :left_user_id %><br />
+    <%= f.text_field :left_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :right_user_id %><br />
+    <%= f.text_field :right_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

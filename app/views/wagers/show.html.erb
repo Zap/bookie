@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @wager.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @wager.description %>
+</p>
+
+<p>
+  <b>Left user:</b>
+  <%= @wager.left_user_id %>
+</p>
+
+<p>
+  <b>Right user:</b>
+  <%= @wager.right_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_wager_path(@wager) %> |
+<%= link_to 'Back', wagers_path %>
