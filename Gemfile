@@ -33,3 +33,5 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
    gem 'test-unit'
    gem 'guard-test'
  end
+
+gem 'devise'
